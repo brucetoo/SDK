@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+    <LinearLayout android:layout_width="wrap_content"
+                  android:id="@+id/top_left_ly"
+                  android:visibility="invisible"
+                  android:paddingLeft="15dp"
+                  android:paddingRight="15dp"
+                  android:layout_height="fill_parent">
+        <ImageView
+                android:id="@+id/top_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/top_back"
+                />
+        <View android:layout_width="1dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="5dp"
+              android:background="@color/gray2"
+              android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/top_center_ly"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="visible">
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:id="@+id/top_center_iv"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"/>
+
+        <TextView
+                android:id="@+id/top_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="账号设置"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:visibility="visible"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:id="@+id/top_right_ly"
+                  android:visibility="invisible"
+                  android:paddingLeft="15dp"
+                  android:paddingRight="15dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_height="fill_parent">
+
+        <View android:layout_width="1dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="5dp"
+              android:background="@color/gray2"
+              android:layout_height="30dp"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/top_right"
+                />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
