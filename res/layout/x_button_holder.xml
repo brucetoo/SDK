@@ -26,8 +26,8 @@
         android:layout_centerHorizontal="true">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/xButtonImg"/>
     </FrameLayout>
 </RelativeLayout>

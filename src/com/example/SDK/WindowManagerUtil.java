@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.PixelFormat;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -24,13 +25,13 @@ public class WindowManagerUtil {
 
     private static WindowManager.LayoutParams detailViewWindowParams;
 
-    private static WindowManager mWindowManager;
+//    private static WindowManager mWindowManager;
 
 
     public static void createDetailView(Context context, float iconXPose, float iconYPose) {
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        int screenWidth = windowManager.getDefaultDisplay().getWidth();
-        int screenHeight = windowManager.getDefaultDisplay().getHeight();
+/*        int screenWidth = windowManager.getDefaultDisplay().getWidth();
+        int screenHeight = windowManager.getDefaultDisplay().getHeight();*/
 
         if (mDetailView == null) {
             mDetailView = new DetailView(context);
@@ -65,10 +66,13 @@ public class WindowManagerUtil {
         Matrix matrix = new Matrix();
         matrix.postScale(0.4f, 0.4f);
         iconView.setImageBitmap(bm.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, true));
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.icon_view,null);
         //iconView.setImageResource(R.drawable.flow);
         // if (magnetView == null) {
         magnetView = new Magnet.Builder(context)
-                .setIconView(iconView)
+                .setIconView(view)
                 .setIconCallback(new IconCallback() {
                     @Override
                     public void onFlingAway() {

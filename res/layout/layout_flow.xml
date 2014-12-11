@@ -19,7 +19,7 @@
 
         <TextView android:layout_width="0dp"
                   android:layout_weight="1"
-                  android:text="个人中心"
+                  android:text="设置"
                   android:textSize="8sp"
                   android:id="@+id/person_center"
                   android:gravity="center"
@@ -32,7 +32,7 @@
                   android:textSize="8sp"
                   android:id="@+id/forum"
                   android:gravity="center"
-                  android:text="论坛"
+                  android:text="呼叫"
                   android:layout_height="wrap_content"/>
         <View android:layout_width="1dp"
               android:background="@color/gray2"
@@ -43,7 +43,7 @@
                   android:id="@+id/gift"
                   android:textSize="8sp"
                   android:gravity="center"
-                  android:text="礼包"
+                  android:text="呼入"
                   android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>
