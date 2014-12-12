@@ -30,6 +30,7 @@ public class Magnet implements View.OnTouchListener {
     private IconCallback mListener;
     private MoveAnimator mAnimator;
 
+    public static boolean isDestroy = false;
     private long lastTouchDown;
     private float lastXPose, lastYPose;
     private boolean isBeingDragged = false;
@@ -130,6 +131,7 @@ public class Magnet implements View.OnTouchListener {
             if(magnet.mIconView == null) {
                 throw new NullPointerException("Magnet view is null! Must set a view for the magnet!");
             }
+             isDestroy = false;
             return magnet;
         }
     }
@@ -228,6 +230,7 @@ public class Magnet implements View.OnTouchListener {
             if (mListener != null) {
                 mListener.onFlingAway();
             }
+            isDestroy = true;
             destroy();
         }
     }

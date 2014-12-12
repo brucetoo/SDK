@@ -112,7 +112,8 @@ public class WindowManagerUtil {
 
     public static void removeAllView() {
         if (magnetView != null) {
-            magnetView.destroy();
+            if(!magnetView.isDestroy)
+                  magnetView.destroy();
             magnetView = null;
         }
         if (mDetailView != null) {
