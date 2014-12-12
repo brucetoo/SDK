@@ -1,7 +1,9 @@
 package com.example.SDK;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -55,7 +57,6 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
     }
 
     @Override
@@ -65,6 +66,16 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+        float progress = (float)seekBar.getProgress() / (float)seekBar.getMax();
+        Log.d("CenterActivity",progress+"");
+        Log.d("CenterActivity-getProgress",seekBar.getProgress()+"");
+        Log.d("CenterActivity-getMax",seekBar.getMax()+"");
+        /*WindowManagerUtil.removeAllView();
+        WindowManagerUtil.createMagnetView(this, progress);*/
+        seekBar.setProgress(seekBar.getProgress());
+        Intent intent = new Intent(this,SDKService.class);
+        intent.putExtra("progress",progress);
+        startService(intent);
 
     }
 }

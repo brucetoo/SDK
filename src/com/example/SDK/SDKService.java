@@ -27,11 +27,16 @@ public class SDKService extends Service {
 
     @Override
     public void onStart(Intent intent, int startId) {
-        super.onStart(intent, startId);
+       // super.onStart(intent, startId);
+       float progress =  intent.getFloatExtra("progress", 0);
        WindowManagerUtil.removeAllView();
-       WindowManagerUtil.createMagnetView(this);
+       WindowManagerUtil.createMagnetView(this,progress);
       //  WindowManagerUtil.createDetailView(this,0,0);
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        stopSelf();
+    }
 }
