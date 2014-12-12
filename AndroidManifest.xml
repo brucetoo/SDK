@@ -15,5 +15,8 @@
         </activity>
 
         <service android:name=".SDKService"/>
+        <activity android:name=".CenterActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                />
     </application>
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.SDK;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -30,9 +31,9 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
         viewWidth = view.getLayoutParams().width;
         viewHeight = view.getLayoutParams().height;
         findViewById(R.id.image).setOnClickListener(this);
-        findViewById(R.id.person_center).setOnClickListener(this);
+        findViewById(R.id.setting).setOnClickListener(this);
         findViewById(R.id.gift).setOnClickListener(this);
-        findViewById(R.id.forum).setOnClickListener(this);
+        findViewById(R.id.auth).setOnClickListener(this);
 
      /*   close.setOnClickListener(new OnClickListener() {
             @Override
@@ -62,7 +63,16 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                 WindowManagerUtil.removeDetailWindow(context);
                 WindowManagerUtil.createMagnetView(context);
                 break;
+            case R.id.setting:
+                Intent intent = new Intent(context,CenterActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+                WindowManagerUtil.removeDetailWindow(context);
+                WindowManagerUtil.createMagnetView(context);
+                break;
 
+            default:
+                break;
 
         }
     }

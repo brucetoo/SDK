@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="账号设置"
+                android:text="设置"
                 android:textColor="@android:color/black"
                 android:textSize="17sp"
                 android:visibility="visible"/>

@@ -22,7 +22,7 @@ public class WindowManagerUtil {
 
     private static DetailView mDetailView;
     private static Magnet magnetView;
-
+    private static ImageView icon_view;
     private static WindowManager.LayoutParams detailViewWindowParams;
 
 //    private static WindowManager mWindowManager;
@@ -62,13 +62,14 @@ public class WindowManagerUtil {
 
     public static void createMagnetView(final Context context) {
         ImageView iconView = new ImageView(context);
-        Bitmap bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.flow);
+        Bitmap bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.logo);
         Matrix matrix = new Matrix();
         matrix.postScale(0.4f, 0.4f);
         iconView.setImageBitmap(bm.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, true));
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.icon_view,null);
+        icon_view = (ImageView) view.findViewById(R.id.flow_image);
         //iconView.setImageResource(R.drawable.flow);
         // if (magnetView == null) {
         magnetView = new Magnet.Builder(context)
