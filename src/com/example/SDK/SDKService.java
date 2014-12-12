@@ -29,6 +29,9 @@ public class SDKService extends Service {
     public void onStart(Intent intent, int startId) {
        // super.onStart(intent, startId);
        float progress =  intent.getFloatExtra("progress", 0);
+       // if(progress == 0){
+            progress = SharePreUtils.getFloat(getApplicationContext(),"prog");
+      // }
        WindowManagerUtil.removeAllView();
        WindowManagerUtil.createMagnetView(this,progress);
       //  WindowManagerUtil.createDetailView(this,0,0);

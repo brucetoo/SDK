@@ -50,6 +50,7 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
         set_seek = (ImageView) findViewById(R.id.set_seek);
         seekBar = (SeekBar) findViewById(R.id.seekbar);
         seekBar.setOnSeekBarChangeListener(this);
+        seekBar.setProgress((int)(SharePreUtils.getFloat(this,"prog")*100));
 
         top = (LinearLayout) findViewById(R.id.top);
         top1 = (LinearLayout) findViewById(R.id.top1);
@@ -72,6 +73,7 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
         Log.d("CenterActivity-getMax",seekBar.getMax()+"");
         /*WindowManagerUtil.removeAllView();
         WindowManagerUtil.createMagnetView(this, progress);*/
+        SharePreUtils.saveFLoat(this,"prog",progress); //缓存
         seekBar.setProgress(seekBar.getProgress());
         Intent intent = new Intent(this,SDKService.class);
         intent.putExtra("progress",progress);

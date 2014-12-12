@@ -61,14 +61,14 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.image:
                 WindowManagerUtil.removeDetailWindow(context);
-                WindowManagerUtil.createMagnetView(context,0);
+                WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
                 break;
             case R.id.setting:
                 Intent intent = new Intent(context,CenterActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
                 WindowManagerUtil.removeDetailWindow(context);
-                WindowManagerUtil.createMagnetView(context,0);
+                WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
                 break;
             default:
                 break;
