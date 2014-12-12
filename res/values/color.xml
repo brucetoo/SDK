@@ -22,4 +22,5 @@
     <color name="gray">#666666</color>
     <color name="gray2">#DCDCDC</color>
     <color name="gray3">#555555</color>
+    <color name="coustomdialog_bg">#E4E8E7</color>
 </resources>
