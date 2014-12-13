@@ -36,7 +36,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c505d868-95d2-4895-b343-c0b731109cf6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" />
@@ -45,10 +44,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/SDK.apk" afterPath="$PROJECT_DIR$/out/production/SDK/SDK.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_center.xml" afterPath="$PROJECT_DIR$/res/layout/layout_center.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_change_secret.xml" afterPath="$PROJECT_DIR$/res/layout/layout_change_secret.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SDK.iws" />
@@ -88,8 +86,8 @@
       <file leaf-file-name="PasswordActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1224">
-              <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="508" max-vertical-offset="1224">
+              <caret line="38" column="89" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1009#1847#0" expanded="true" />
@@ -101,42 +99,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CenterActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CenterActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1564">
-              <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.73752713" vertical-offset="1411" max-vertical-offset="2346">
+              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
               <folding>
-                <element signature="e#1828#2094#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
+                <element signature="e#2362#2627#0" expanded="true" />
+                <element signature="e#2626#2627#0" expanded="true" />
+                <element signature="e#2711#2855#0" expanded="true" />
+                <element signature="e#2854#2855#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecretActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44685465" vertical-offset="134" max-vertical-offset="1224">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2159#2303#0" expanded="true" />
-                <element signature="e#2302#2303#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_change_secret.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/layout_change_secret.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0" vertical-offset="843" max-vertical-offset="2091">
-              <caret line="66" column="49" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="49" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,28 +120,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.193548" vertical-offset="5129" max-vertical-offset="5729">
-              <caret line="313" column="52" selection-start-line="313" selection-start-column="39" selection-end-line="313" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SharePreUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="833">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="40" />
+            <state vertical-scroll-proportion="-0.22580644" vertical-offset="418" max-vertical-offset="5797">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -192,14 +145,14 @@
         <option value="$PROJECT_DIR$/res/drawable/btn_text_selector.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/layout_dialog.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" />
         <option value="$PROJECT_DIR$/src/com/example/SDK/CustomDialog.java" />
         <option value="$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/layout_center.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/layout_change_secret.xml" />
         <option value="$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" />
+        <option value="$PROJECT_DIR$/res/layout/layout_center.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" />
       </list>
     </option>
   </component>
@@ -744,7 +697,7 @@
       <workItem from="1418391054660" duration="675000" />
       <workItem from="1418392285022" duration="8000" />
       <workItem from="1418392346886" duration="6305000" />
-      <workItem from="1418433109138" duration="5322000" />
+      <workItem from="1418433109138" duration="6797000" />
     </task>
     <task id="LOCAL-00001" summary="add main view">
       <created>1418356306332</created>
@@ -770,11 +723,17 @@
       <option name="project" value="LOCAL" />
       <updated>1418436174744</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="密码修改">
+      <created>1418438454614</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1418438454614</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59027000" />
+    <option name="totallyTimeSpent" value="60502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
@@ -831,7 +790,8 @@
     <MESSAGE value="add main view" />
     <MESSAGE value="浮框逻辑添加" />
     <MESSAGE value="Dialog框逻辑添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dialog框逻辑添加" />
+    <MESSAGE value="密码修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="密码修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1111,14 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="833">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SDK/DetailView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="1462">
@@ -1142,14 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55314535" vertical-offset="204" max-vertical-offset="2006">
           <caret line="32" column="50" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1198,31 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1224">
-          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1009#1847#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1893#2091#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/layout_center.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.193548" vertical-offset="5129" max-vertical-offset="5729">
-          <caret line="313" column="52" selection-start-line="313" selection-start-column="39" selection-end-line="313" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81127983" vertical-offset="0" max-vertical-offset="544">
@@ -1239,14 +1158,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1564">
-          <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="508" max-vertical-offset="1224">
+          <caret line="38" column="89" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
           <folding>
-            <element signature="e#1828#2094#0" expanded="true" />
-            <element signature="e#2093#2094#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1009#1847#0" expanded="true" />
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#1893#2091#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8524946" vertical-offset="372" max-vertical-offset="901">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1255,20 +1193,44 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0" vertical-offset="843" max-vertical-offset="2091">
-          <caret line="66" column="49" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.33255813" vertical-offset="1659" max-vertical-offset="2091">
+          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="113" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/layout_center.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22580644" vertical-offset="418" max-vertical-offset="5797">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44685465" vertical-offset="134" max-vertical-offset="1224">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.48373103" vertical-offset="134" max-vertical-offset="1224">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2159#2303#0" expanded="true" />
             <element signature="e#2302#2303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73752713" vertical-offset="1411" max-vertical-offset="2346">
+          <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+          <folding>
+            <element signature="e#2362#2627#0" expanded="true" />
+            <element signature="e#2626#2627#0" expanded="true" />
+            <element signature="e#2711#2855#0" expanded="true" />
+            <element signature="e#2854#2855#0" expanded="true" />
           </folding>
         </state>
       </provider>

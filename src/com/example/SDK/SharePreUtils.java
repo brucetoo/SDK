@@ -20,7 +20,7 @@ public class SharePreUtils {
         preferences.edit().putFloat(key, value).commit();
     }
 
-    public static float getFloat(Context ct,String key) {
+    public static float getFloat(Context ct, String key) {
         if (preferences == null) {
             preferences = ct.getSharedPreferences(PreName, ct.MODE_PRIVATE);
         }
@@ -35,10 +35,14 @@ public class SharePreUtils {
         preferences.edit().putString(key, value).commit();
     }
 
-    public static String getString(Context ct,String key) {
+    public static String getString(Context ct, String key) {
         if (preferences == null) {
             preferences = ct.getSharedPreferences(PreName, ct.MODE_PRIVATE);
         }
-        return preferences.getString(key, "123");
+        if (key.equals("password")) {
+            return preferences.getString(key, "123");
+        }else{
+            return preferences.getString(key, "");
+        }
     }
 }
