@@ -36,17 +36,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c505d868-95d2-4895-b343-c0b731109cf6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$string.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$style.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/MainActivity.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/SDK.apk" afterPath="$PROJECT_DIR$/out/production/SDK/SDK.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_center.xml" afterPath="$PROJECT_DIR$/res/layout/layout_center.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SDK.iws" />
@@ -102,14 +94,24 @@
       <file leaf-file-name="CenterActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73752713" vertical-offset="1411" max-vertical-offset="2346">
-              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.6816976" vertical-offset="1324" max-vertical-offset="2550">
+              <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
               <folding>
                 <element signature="e#2362#2627#0" expanded="true" />
                 <element signature="e#2626#2627#0" expanded="true" />
                 <element signature="e#2711#2855#0" expanded="true" />
                 <element signature="e#2854#2855#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/com/example/SDK/SharePreUtils.java" />
         <option value="$PROJECT_DIR$/res/layout/layout_center.xml" />
         <option value="$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/SDK/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -697,7 +700,7 @@
       <workItem from="1418391054660" duration="675000" />
       <workItem from="1418392285022" duration="8000" />
       <workItem from="1418392346886" duration="6305000" />
-      <workItem from="1418433109138" duration="6797000" />
+      <workItem from="1418433109138" duration="9024000" />
     </task>
     <task id="LOCAL-00001" summary="add main view">
       <created>1418356306332</created>
@@ -729,11 +732,17 @@
       <option name="project" value="LOCAL" />
       <updated>1418438454614</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="界面数据缓存">
+      <created>1418439937945</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1418439937945</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60502000" />
+    <option name="totallyTimeSpent" value="62729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
@@ -760,7 +769,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46094608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55335534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16259168" sideWeight="0.49916247" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -791,7 +800,8 @@
     <MESSAGE value="浮框逻辑添加" />
     <MESSAGE value="Dialog框逻辑添加" />
     <MESSAGE value="密码修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="密码修改" />
+    <MESSAGE value="界面数据缓存" />
+    <option name="LAST_COMMIT_MESSAGE" value="界面数据缓存" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1180,14 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/layout_change_secret.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1222,10 +1224,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/SDK/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SDK/CenterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73752713" vertical-offset="1411" max-vertical-offset="2346">
-          <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.6816976" vertical-offset="1324" max-vertical-offset="2550">
+          <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding>
             <element signature="e#2362#2627#0" expanded="true" />
             <element signature="e#2626#2627#0" expanded="true" />

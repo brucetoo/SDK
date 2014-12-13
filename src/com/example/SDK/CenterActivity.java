@@ -94,8 +94,20 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 ) {
             Toast.makeText(CenterActivity.this, "每个参数都不能为空,请再次输入", Toast.LENGTH_SHORT).show();
         } else {
-            SharePreUtils.saveString(CenterActivity.this, "room", room.getText().toString());
-            SharePreUtils.saveString(CenterActivity.this, "floor", floor.getText().toString());
+            if (Integer.parseInt(room.getText().toString()) > 254) {
+                Toast.makeText(CenterActivity.this, "房间号不能大于254", Toast.LENGTH_SHORT).show();
+                SharePreUtils.saveString(CenterActivity.this, "room", "254");
+            } else {
+                SharePreUtils.saveString(CenterActivity.this, "room", room.getText().toString());
+            }
+
+            if (Integer.parseInt(floor.getText().toString()) > 254) {
+                Toast.makeText(CenterActivity.this, "楼层不能大于254", Toast.LENGTH_SHORT).show();
+                SharePreUtils.saveString(CenterActivity.this, "floor", "254");
+            } else {
+                SharePreUtils.saveString(CenterActivity.this, "floor", floor.getText().toString());
+            }
+
             SharePreUtils.saveString(CenterActivity.this, "port", port.getText().toString());
             SharePreUtils.saveString(CenterActivity.this, "ip1", ip1.getText().toString());
             SharePreUtils.saveString(CenterActivity.this, "ip2", ip2.getText().toString());
