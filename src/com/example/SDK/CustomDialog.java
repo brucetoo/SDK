@@ -18,7 +18,7 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
 	private Button custom_dialog_cancel_btn;
 
 	private View custom_dialog_line;
-    private EditText custom_dialog_edit_text;
+    public EditText custom_dialog_edit_text;
 
 	/**
 	 * 自定义主题及布局的构造方法

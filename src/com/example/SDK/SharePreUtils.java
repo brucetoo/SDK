@@ -26,4 +26,19 @@ public class SharePreUtils {
         }
         return preferences.getFloat(key, 0);
     }
+
+
+    public static void saveString(Context ct, String key, String value) {
+        if (preferences == null) {
+            preferences = ct.getSharedPreferences(PreName, ct.MODE_PRIVATE);
+        }
+        preferences.edit().putString(key, value).commit();
+    }
+
+    public static String getString(Context ct,String key) {
+        if (preferences == null) {
+            preferences = ct.getSharedPreferences(PreName, ct.MODE_PRIVATE);
+        }
+        return preferences.getString(key, "123");
+    }
 }

@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FloatView.iml" filepath="$PROJECT_DIR$/FloatView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SDK.iml" filepath="$PROJECT_DIR$/SDK.iml" />
     </modules>
   </component>
 </project>
-
