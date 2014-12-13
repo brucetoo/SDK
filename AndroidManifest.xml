@@ -20,5 +20,7 @@
                 />
         <activity android:name=".PasswordActivity"
                   android:theme="@style/Transparent"/>
+        <activity android:name=".SecretActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"/>
     </application>
 </manifest>

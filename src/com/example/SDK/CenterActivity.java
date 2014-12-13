@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SeekBar;
+import android.view.View;
+import android.widget.*;
 
 /**
  * Created by Bruce-too-N1007
@@ -29,6 +27,7 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
     private SeekBar seekBar;
     private LinearLayout top;
     private LinearLayout top1;
+    private TextView change_secret;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +53,15 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
 
         top = (LinearLayout) findViewById(R.id.top);
         top1 = (LinearLayout) findViewById(R.id.top1);
+
+        change_secret = (TextView) findViewById(R.id.change_secret);
+        change_secret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                  Intent intent = new Intent(CenterActivity.this,SecretActivity.class);
+                CenterActivity.this.startActivity(intent);
+            }
+        });
     }
 
     @Override
