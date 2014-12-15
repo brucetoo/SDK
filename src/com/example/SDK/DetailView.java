@@ -80,13 +80,15 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                 break;
 
             case R.id.auth:
-                UDPHelper helper = new UDPHelper(context,handler);
+                UDPHelper helper = new UDPHelper(context,handler,"auth");
                 Thread udp = new Thread(helper);
                 udp.start();
                 break;
 
             case R.id.call:
-
+                UDPHelper helper1 = new UDPHelper(context,handler,"call");
+                Thread udp1 = new Thread(helper1);
+                udp1.start();
                 break;
             default:
                 break;
@@ -113,7 +115,7 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                     Toast.makeText(context, "服务器无响应.....", Toast.LENGTH_SHORT).show();
                     break;
                 case 5:
-                    Toast.makeText(context, "请在设置中填写每个参数", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "请在设置中填写每一个参数", Toast.LENGTH_LONG).show();
                     break;
             }
             super.handleMessage(msg);

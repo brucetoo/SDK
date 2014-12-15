@@ -11,8 +11,8 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.main);
-        startService(new Intent(this,SDKService.class));
+        // setContentView(R.layout.main);
+        startService(new Intent(this, SDKService.class));
         finish();
     }
 }
