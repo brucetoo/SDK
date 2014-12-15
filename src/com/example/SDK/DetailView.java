@@ -2,9 +2,13 @@ package com.example.SDK;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 
 /**
  * Class Function:
@@ -32,7 +36,7 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
         viewHeight = view.getLayoutParams().height;
         findViewById(R.id.image).setOnClickListener(this);
         findViewById(R.id.setting).setOnClickListener(this);
-        findViewById(R.id.gift).setOnClickListener(this);
+        findViewById(R.id.call).setOnClickListener(this);
         findViewById(R.id.auth).setOnClickListener(this);
 
      /*   close.setOnClickListener(new OnClickListener() {
@@ -72,13 +76,48 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                /* Intent intent = new Intent(context,CenterActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);*/
-                WindowManagerUtil.removeDetailWindow(context);
-                WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
+
+                break;
+
+            case R.id.auth:
+                UDPHelper helper = new UDPHelper(context,handler);
+                Thread udp = new Thread(helper);
+                udp.start();
+                break;
+
+            case R.id.call:
+
                 break;
             default:
                 break;
-
         }
+        WindowManagerUtil.removeDetailWindow(context);
+        WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
     }
+
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    Toast.makeText(context, "消息发送中....", Toast.LENGTH_SHORT).show();
+                    break;
+                case 2:
+                    Toast.makeText(context, "消息发送失败", Toast.LENGTH_SHORT).show();
+                    break;
+                case 3:
+                    Toast.makeText(context, "消息发送成功", Toast.LENGTH_SHORT).show();
+                    break;
+                case 4:
+                    Toast.makeText(context, "服务器无响应.....", Toast.LENGTH_SHORT).show();
+                    break;
+                case 5:
+                    Toast.makeText(context, "请在设置中填写每个参数", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    };
 
 }

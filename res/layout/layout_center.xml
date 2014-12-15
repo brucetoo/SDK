@@ -72,7 +72,7 @@
                               android:background="@drawable/edittext"
                               android:hint="1"
                               android:id="@+id/floor"
-                              android:inputType="number"
+                              android:inputType="numberSigned"
                               android:maxLength="3"
                               android:textSize="15sp"
                               android:paddingLeft="10dp"
