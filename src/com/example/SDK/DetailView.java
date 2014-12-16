@@ -65,43 +65,47 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.image:
                 WindowManagerUtil.removeDetailWindow(context);
-                WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
+                WindowManagerUtil.createMagnetView(context, SharePreUtils.getFloat(context, "prog"));
                 break;
             case R.id.setting:
 
-                Intent intent = new Intent(context,PasswordActivity.class);
+                Intent intent = new Intent(context, PasswordActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
                /* Intent intent = new Intent(context,CenterActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);*/
-
+                WindowManagerUtil.removeDetailWindow(context);
+                WindowManagerUtil.createMagnetView(context, SharePreUtils.getFloat(context, "prog"));
                 break;
 
             case R.id.auth:
-                UDPHelper helper = new UDPHelper(context,handler,"auth");
+                UDPHelper helper = new UDPHelper(context, handler, "auth");
                 Thread udp = new Thread(helper);
                 udp.start();
+                WindowManagerUtil.removeDetailWindow(context);
+                WindowManagerUtil.createMagnetView(context, SharePreUtils.getFloat(context, "prog"));
                 break;
 
             case R.id.call:
-                UDPHelper helper1 = new UDPHelper(context,handler,"call");
+                UDPHelper helper1 = new UDPHelper(context, handler, "call");
                 Thread udp1 = new Thread(helper1);
                 udp1.start();
+                WindowManagerUtil.removeDetailWindow(context);
+                WindowManagerUtil.createMagnetView(context, SharePreUtils.getFloat(context, "prog"));
                 break;
             default:
                 break;
         }
-        WindowManagerUtil.removeDetailWindow(context);
-        WindowManagerUtil.createMagnetView(context,SharePreUtils.getFloat(context,"prog"));
+
     }
 
 
-    Handler handler = new Handler(){
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
                     Toast.makeText(context, "消息发送中....", Toast.LENGTH_SHORT).show();
                     break;
@@ -116,6 +120,9 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                     break;
                 case 5:
                     Toast.makeText(context, "请在设置中填写每一个参数", Toast.LENGTH_LONG).show();
+                    break;
+                case 6:
+                    Toast.makeText(context, "第"+msg.getData().getInt("try") +"次尝试发送", Toast.LENGTH_SHORT).show();
                     break;
             }
             super.handleMessage(msg);

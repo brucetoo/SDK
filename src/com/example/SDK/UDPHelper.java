@@ -1,7 +1,9 @@
 package com.example.SDK;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -68,9 +70,7 @@ public class UDPHelper implements Runnable {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        if (datagramPacket == null) {
-            datagramPacket = new DatagramPacket(message.getBytes(), message.length(), mAddress, serverPort);
-        }
+        datagramPacket = new DatagramPacket(message.getBytes(), message.length(), mAddress, serverPort);
 
         while (!receivedResponse && tries < MAXNUM) {
             try {
@@ -80,10 +80,18 @@ public class UDPHelper implements Runnable {
                     //接收从服务端发送回来的数据
                     mSocket.receive(receivePacket);
                     //如果接收到数据。则将receivedResponse标志位改为true，从而退出循环
+                    handler.sendEmptyMessage(3);
                     receivedResponse = true;
                 } catch (InterruptedIOException e) {
                     //如果接收数据时阻塞超时，重发并减少一次重发的次数
                     tries += 1;
+
+                    Message msg = new Message();
+                    msg.what = 6;
+                    Bundle da = new Bundle();
+                    da.putInt("try",tries);
+                    msg.setData(da);
+                    handler.sendMessage(msg);
                     System.out.println("Time out," + (MAXNUM - tries) + " more tries...");
                 }
                 //System.out.println("=======发送成功========");
@@ -98,7 +106,7 @@ public class UDPHelper implements Runnable {
         if (receivedResponse) {
             //如果收到数据，则打印出来
             System.out.println("client received data from server：");
-            String str_receive = new String(receivePacket.getData(), 0, receivePacket.getLength()) +
+            String str_receive = new String(receivePacket.getData(), receivePacket.getOffset(), receivePacket.getOffset() + receivePacket.getLength()) +
                     " from " + receivePacket.getAddress().getHostAddress() + ":" + receivePacket.getPort();
             System.out.println(str_receive);
             //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，
@@ -183,7 +191,7 @@ public class UDPHelper implements Runnable {
         } else {
             //0x000c+0x408b+0x0000+0x0f03+0x0100
             sign = Integer.toHexString(0x000c + 0x408b + 0x0000 + Integer.parseInt(mf + mr, 16) + 0x0100); //5099
-            str = sign + "000c408b0000" + mf + mr+"0100";
+            str = sign + "000c408b0000" + mf + mr + "0100";
         }
         Log.d("getMag-sign:", sign);
         //50 99 00 0c 40 8a 00 00 01 00 0f 03
@@ -191,7 +199,7 @@ public class UDPHelper implements Runnable {
         str = sign + "000c408a00000100" + mf + mr;*/
         data = parseString(str);
         Log.d("getMsg-str:", str);
-        Log.d("getMsg-parse-str:", parseString(str));
+        Log.d("getMsg--data:", data);
     }
 
     public String parseString(String str) {
