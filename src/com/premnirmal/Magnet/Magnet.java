@@ -1,6 +1,7 @@
 package com.premnirmal.Magnet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import com.example.SDK.SDKService;
 
 /**
  * Created by prem on 7/20/14.
@@ -283,6 +285,7 @@ public class Magnet implements View.OnTouchListener {
         if (mListener != null) {
             mListener.onIconDestroyed();
         }
+        mContext.stopService(new Intent(mContext, SDKService.class));
         mContext = null;
     }
 
