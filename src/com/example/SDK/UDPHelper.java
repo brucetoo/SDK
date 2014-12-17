@@ -81,6 +81,7 @@ public class UDPHelper implements Runnable {
                     mSocket.receive(receivePacket);
                     //如果接收到数据。则将receivedResponse标志位改为true，从而退出循环
                     if (type.equals("auth")) {
+                        //xxxx	0x0008	0x408A	0x02	0x00
                         handler.sendEmptyMessage(3);
                     }else{
                         handler.sendEmptyMessage(7);
@@ -208,6 +209,9 @@ public class UDPHelper implements Runnable {
         String str = "";
         if (type.equals("auth")) {
             sign = Integer.toHexString(0x000c + 0x408a + 0x0000 + 0x0100+Integer.parseInt(mf+mr,16) ); //5099
+            if(sign.length()>=5){  //sign字节溢出
+                sign = sign.substring(sign.length()-4,sign.length());
+            }
             str = sign + "000c"+
                     Integer.toHexString(0x408a)+
                     "0000"+
@@ -216,6 +220,9 @@ public class UDPHelper implements Runnable {
         } else {
             //0x000c+0x408b+0x0000+0x0f03+0x0100
             sign = Integer.toHexString(0x000c + 0x408b + 0x0000 + Integer.parseInt(mf + mr, 16) + 0x0100); //509a
+            if(sign.length()>=5){
+                sign = sign.substring(sign.length()-4,sign.length());
+            }
             str = sign + "000c"+
                     Integer.toHexString(0x408a)+
                     "0000" + mf + mr +  "0100";
