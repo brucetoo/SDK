@@ -125,6 +125,7 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
                 SharePreUtils.saveString(CenterActivity.this, "floor", "254");
             } else if (Integer.parseInt(floor.getText().toString()) < -6) {
                 Toast.makeText(CenterActivity.this, "楼层小于-6,已默认为-6", Toast.LENGTH_SHORT).show();
+                SharePreUtils.saveString(CenterActivity.this, "floor", "-6");
             } else {
                 SharePreUtils.saveString(CenterActivity.this, "floor", floor.getText().toString());
             }
