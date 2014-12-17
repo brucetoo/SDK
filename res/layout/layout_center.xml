@@ -7,335 +7,339 @@
 
     <include layout="@layout/layout_person_head"/>
 
+    <ScrollView android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    <LinearLayout android:layout_width="fill_parent"
-                  android:orientation="vertical"
-                  android:background="@color/white"
-                  android:layout_height="wrap_content">
 
-        <Button android:layout_width="fill_parent"
-                style="@style/ButtonStyle"
-                android:text="保存信息"
-                android:id="@+id/save"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_height="40dp"/>
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent"
+                      android:orientation="vertical"
+                      android:background="@color/white"
+                      android:layout_height="wrap_content">
 
-            <LinearLayout android:layout_width="fill_parent"
-                          android:id="@+id/top"
-                          android:layout_height="40dp">
+            <Button android:layout_width="fill_parent"
+                    style="@style/ButtonStyle"
+                    android:text="保存信息"
+                    android:id="@+id/save"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="40dp"/>
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:id="@+id/top"
+                              android:layout_height="40dp">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="本机地址设置"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginLeft="30dp"
+                              android:textColor="@color/black2"
+                              android:layout_toRightOf="@+id/change_secret"
+                              android:textSize="15sp"
+                            />
+                    <View android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                          android:layout_weight="1"
+                            />
+                    <ImageView android:layout_width="wrap_content"
+                               android:id="@+id/local_ad_ig"
+                               android:visibility="gone"
+                               android:layout_alignParentRight="true"
+                               android:layout_marginRight="20dp"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="fill_parent"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_below="@+id/top"
+                              android:orientation="vertical"
+                              android:visibility="visible"
+                              android:layout_height="80dp">
+                    <RelativeLayout android:layout_width="fill_parent"
+                                    android:layout_height="40dp">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="楼层:"
+                                  android:layout_marginTop="10dp"
+                                  android:layout_marginLeft="30dp"
+                                  android:textColor="@color/black2"
+                                  android:id="@+id/left1"
+                                  android:layout_toRightOf="@+id/manage_secret"
+                                  android:textSize="15sp"
+                                />
+                        <EditText android:layout_width="match_parent"
+                                  android:layout_toRightOf="@id/left1"
+                                  android:layout_marginRight="20dp"
+                                  android:background="@drawable/edittext"
+                                  android:hint="1"
+                                  android:id="@+id/floor"
+                                  android:inputType="numberSigned"
+                                  android:maxLength="3"
+                                  android:textSize="15sp"
+                                  android:paddingLeft="10dp"
+                                  android:layout_marginLeft="15dp"
+                                  android:layout_height="match_parent"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent"
+                                    android:layout_height="40dp">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="房号:"
+                                  android:layout_marginTop="10dp"
+                                  android:layout_marginLeft="30dp"
+                                  android:textColor="@color/black2"
+                                  android:id="@+id/left4"
+                                  android:layout_toRightOf="@+id/manage_secret"
+                                  android:textSize="15sp"
+                                />
+                        <EditText android:layout_width="match_parent"
+                                  android:layout_toRightOf="@id/left4"
+                                  android:layout_marginRight="20dp"
+                                  android:background="@drawable/edittext"
+                                  android:hint="22"
+                                  android:id="@+id/room"
+                                  android:inputType="number"
+                                  android:maxLength="3"
+                                  android:textSize="15sp"
+                                  android:paddingLeft="10dp"
+                                  android:layout_marginLeft="10dp"
+                                  android:layout_height="match_parent"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="#F0EFF4"
+                    />
+
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="40dp">
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="本机地址设置"
+                          android:text="通讯端口号:"
                           android:layout_marginTop="10dp"
                           android:layout_marginLeft="30dp"
                           android:textColor="@color/black2"
-                          android:layout_toRightOf="@+id/change_secret"
+                          android:id="@+id/left2"
+                          android:layout_toRightOf="@+id/manage_secret"
                           android:textSize="15sp"
                         />
-                <View android:layout_width="0dp"
-                      android:layout_height="fill_parent"
-                      android:layout_weight="1"
-                        />
-                <ImageView android:layout_width="wrap_content"
-                           android:id="@+id/local_ad_ig"
-                           android:visibility="gone"
-                           android:layout_alignParentRight="true"
-                           android:layout_marginRight="20dp"
-                           android:src="@drawable/arrow_right"
-                           android:layout_height="fill_parent"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="fill_parent"
-                          android:layout_below="@+id/top"
-                          android:orientation="vertical"
-                          android:visibility="visible"
-                          android:layout_height="80dp">
-                <RelativeLayout android:layout_width="fill_parent"
-                                android:layout_height="40dp">
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="楼层:"
-                              android:layout_marginTop="10dp"
-                              android:layout_marginLeft="30dp"
-                              android:textColor="@color/black2"
-                              android:id="@+id/left1"
-                              android:layout_toRightOf="@+id/manage_secret"
-                              android:textSize="15sp"
-                            />
-                    <EditText android:layout_width="match_parent"
-                              android:layout_toRightOf="@id/left1"
-                              android:layout_marginRight="20dp"
-                              android:background="@drawable/edittext"
-                              android:hint="1"
-                              android:id="@+id/floor"
-                              android:inputType="numberSigned"
-                              android:maxLength="3"
-                              android:textSize="15sp"
-                              android:paddingLeft="10dp"
-                              android:layout_marginLeft="15dp"
-                              android:layout_height="match_parent"/>
-                </RelativeLayout>
-                <RelativeLayout android:layout_width="fill_parent"
-                                android:layout_height="40dp">
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="房号:"
-                              android:layout_marginTop="10dp"
-                              android:layout_marginLeft="30dp"
-                              android:textColor="@color/black2"
-                              android:id="@+id/left4"
-                              android:layout_toRightOf="@+id/manage_secret"
-                              android:textSize="15sp"
-                            />
-                    <EditText android:layout_width="match_parent"
-                              android:layout_toRightOf="@id/left4"
-                              android:layout_marginRight="20dp"
-                              android:background="@drawable/edittext"
-                              android:hint="22"
-                              android:id="@+id/room"
-                              android:inputType="number"
-                              android:maxLength="3"
-                              android:textSize="15sp"
-                              android:paddingLeft="10dp"
-                              android:layout_marginLeft="10dp"
-                              android:layout_height="match_parent"/>
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <View android:layout_width="fill_parent"
-              android:layout_height="1dp"
-              android:background="#F0EFF4"
-                />
-
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="40dp">
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="通讯端口号:"
-                      android:layout_marginTop="10dp"
-                      android:layout_marginLeft="30dp"
-                      android:textColor="@color/black2"
-                      android:id="@+id/left2"
-                      android:layout_toRightOf="@+id/manage_secret"
-                      android:textSize="15sp"
-                    />
-            <EditText android:layout_width="match_parent"
-                      android:layout_toRightOf="@id/left2"
-                      android:layout_marginRight="20dp"
-                      android:background="@drawable/edittext"
-                      android:hint="8888"
-                      android:id="@+id/port"
-                      android:inputType="number"
-                      android:maxLength="4"
-                      android:textSize="15sp"
-                      android:paddingLeft="10dp"
-                      android:layout_marginLeft="25dp"
-                      android:layout_height="match_parent"/>
-        </RelativeLayout>
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="#F0EFF4"
-                />
-
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="40dp">
-
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="梯控服务器IP:"
-                      android:layout_marginTop="10dp"
-                      android:layout_marginLeft="30dp"
-                      android:textColor="@color/black2"
-                      android:id="@+id/left3"
-                      android:layout_toRightOf="@+id/msg_center"
-                      android:textSize="15sp"
-                    />
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/left3"
-                    android:layout_height="fill_parent"
-                    >
-                <EditText
-                        android:id="@+id/ip1"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:textColor="#000"
-                        android:textSize="15sp"
-                        android:gravity="center"
-                        android:singleLine="true"
-                        android:background="@drawable/edittext"
-                        android:inputType="number"
-                        android:hint="192"
-                        android:maxLength="3"
-                        />
-                <TextView
-                        android:id="@+id/dot_1"
-                        android:layout_toRightOf="@id/ip1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="."
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:singleLine="true"
-                        />
-                <EditText
-                        android:id="@+id/ip2"
-                        android:layout_toRightOf="@id/dot_1"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:textColor="#000"
-                        android:textSize="15sp"
-                        android:background="@drawable/edittext"
-                        android:gravity="center"
-                        android:singleLine="true"
-                        android:inputType="number"
-                        android:hint="168"
-                        android:maxLength="3"
-                        />
-                <TextView
-                        android:id="@+id/dot_2"
-                        android:layout_toRightOf="@id/ip2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="."
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:singleLine="true"
-                        />
-                <EditText
-                        android:id="@+id/ip3"
-                        android:layout_toRightOf="@id/dot_2"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:textColor="#000"
-                        android:textSize="15sp"
-                        android:gravity="center"
-                        android:background="@drawable/edittext"
-                        android:singleLine="true"
-                        android:inputType="number"
-                        android:hint="2"
-                        android:maxLength="3"
-                        />
-                <TextView
-                        android:id="@+id/dot_3"
-                        android:layout_toRightOf="@id/ip3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="."
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:singleLine="true"
-                        />
-                <EditText
-                        android:id="@+id/ip4"
-                        android:layout_toRightOf="@id/dot_3"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:textColor="#000"
-                        android:textSize="15sp"
-                        android:gravity="center"
-                        android:background="@drawable/edittext"
-                        android:singleLine="true"
-                        android:inputType="number"
-                        android:hint="105"
-                        android:maxLength="3"
-                        />
+                <EditText android:layout_width="match_parent"
+                          android:layout_toRightOf="@id/left2"
+                          android:layout_marginRight="20dp"
+                          android:background="@drawable/edittext"
+                          android:hint="8888"
+                          android:id="@+id/port"
+                          android:inputType="number"
+                          android:maxLength="4"
+                          android:textSize="15sp"
+                          android:paddingLeft="10dp"
+                          android:layout_marginLeft="25dp"
+                          android:layout_height="match_parent"/>
             </RelativeLayout>
-        </RelativeLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#F0EFF4"
+                    />
 
-
-        <View android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:background="#F0EFF4"
-                />
-
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="wrap_content">
-
-            <LinearLayout android:layout_width="fill_parent"
-                          android:id="@+id/top1"
-                          android:layout_height="40dp">
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="40dp">
 
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="主窗口透明度调节"
+                          android:text="梯控服务器IP:"
                           android:layout_marginTop="10dp"
                           android:layout_marginLeft="30dp"
                           android:textColor="@color/black2"
+                          android:id="@+id/left3"
                           android:layout_toRightOf="@+id/msg_center"
                           android:textSize="15sp"
                         />
-                <View android:layout_width="0dp"
-                      android:layout_weight="1"
-                      android:layout_height="fill_parent"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/left3"
+                        android:layout_height="fill_parent"
+                        >
+                    <EditText
+                            android:id="@+id/ip1"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:background="@drawable/edittext"
+                            android:inputType="number"
+                            android:hint="192"
+                            android:maxLength="3"
+                            />
+                    <TextView
+                            android:id="@+id/dot_1"
+                            android:layout_toRightOf="@id/ip1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="."
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            />
+                    <EditText
+                            android:id="@+id/ip2"
+                            android:layout_toRightOf="@id/dot_1"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:background="@drawable/edittext"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:hint="168"
+                            android:maxLength="3"
+                            />
+                    <TextView
+                            android:id="@+id/dot_2"
+                            android:layout_toRightOf="@id/ip2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="."
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            />
+                    <EditText
+                            android:id="@+id/ip3"
+                            android:layout_toRightOf="@id/dot_2"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:background="@drawable/edittext"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:hint="2"
+                            android:maxLength="3"
+                            />
+                    <TextView
+                            android:id="@+id/dot_3"
+                            android:layout_toRightOf="@id/ip3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="."
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            />
+                    <EditText
+                            android:id="@+id/ip4"
+                            android:layout_toRightOf="@id/dot_3"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:background="@drawable/edittext"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:hint="105"
+                            android:maxLength="3"
+                            />
+                </RelativeLayout>
+            </RelativeLayout>
 
-                <ImageView android:layout_width="wrap_content"
-                           android:id="@+id/set_seek"
-                           android:visibility="gone"
-                           android:layout_alignParentRight="true"
-                           android:layout_marginRight="20dp"
-                           android:src="@drawable/arrow_right"
-                           android:layout_height="fill_parent"/>
-            </LinearLayout>
 
-            <LinearLayout android:layout_width="fill_parent"
-                          android:layout_below="@+id/top1"
-                          android:visibility="visible"
-                          android:layout_height="40dp">
-                <SeekBar android:id="@+id/seekbar"
-                         android:layout_width="fill_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginLeft="30dp"
-                         android:layout_marginRight="20dp"
-                         android:max="100"
-                         android:progress="50"
-                         android:secondaryProgress="100"></SeekBar>
-                <!--   android:progressDrawable="@drawable/seekbar"-->
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <View android:layout_width="fill_parent"
-              android:layout_height="1dp"
-              android:background="#F0EFF4"
-                />
-
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="40dp">
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_centerInParent="true"
-                      android:text="点击-密码修改"
-                      android:id="@+id/change_secret"
-                      android:onClick="setSecret"
-                      android:layout_marginTop="10dp"
-                      android:layout_marginLeft="30dp"
-                      android:textColor="@color/black2"
-                      android:textSize="15sp"
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#F0EFF4"
                     />
 
-        </RelativeLayout>
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="40dp">
-            <CheckBox android:layout_width="wrap_content"
-                      android:layout_centerInParent="true"
-                      android:text="开机启动"
-                      android:id="@+id/checkbox"
-                      android:textColor="@color/black"
-                      android:checked="false"
-                      android:layout_height="fill_parent"/>
-        </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                              android:id="@+id/top1"
+                              android:layout_height="40dp">
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="主窗口透明度调节"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginLeft="30dp"
+                              android:textColor="@color/black2"
+                              android:layout_toRightOf="@+id/msg_center"
+                              android:textSize="15sp"
+                            />
+                    <View android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="fill_parent"/>
+
+                    <ImageView android:layout_width="wrap_content"
+                               android:id="@+id/set_seek"
+                               android:visibility="gone"
+                               android:layout_alignParentRight="true"
+                               android:layout_marginRight="20dp"
+                               android:src="@drawable/arrow_right"
+                               android:layout_height="fill_parent"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_below="@+id/top1"
+                              android:visibility="visible"
+                              android:layout_height="40dp">
+                    <SeekBar android:id="@+id/seekbar"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="30dp"
+                             android:layout_marginRight="20dp"
+                             android:max="100"
+                             android:progress="50"
+                             android:secondaryProgress="100"></SeekBar>
+                    <!--   android:progressDrawable="@drawable/seekbar"-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:background="#F0EFF4"
+                    />
+
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="40dp">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerInParent="true"
+                          android:text="点击-密码修改"
+                          android:id="@+id/change_secret"
+                          android:onClick="setSecret"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="30dp"
+                          android:textColor="@color/black2"
+                          android:textSize="15sp"
+                        />
+
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="40dp">
+                <CheckBox android:layout_width="wrap_content"
+                          android:layout_centerInParent="true"
+                          android:text="开机启动"
+                          android:id="@+id/checkbox"
+                          android:textColor="@color/black"
+                          android:checked="false"
+                          android:layout_height="fill_parent"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <ImageView android:layout_width="fill_parent"
                android:layout_height="match_parent"
