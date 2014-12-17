@@ -80,7 +80,11 @@ public class UDPHelper implements Runnable {
                     //接收从服务端发送回来的数据
                     mSocket.receive(receivePacket);
                     //如果接收到数据。则将receivedResponse标志位改为true，从而退出循环
-                    handler.sendEmptyMessage(3);
+                    if (type.equals("auth")) {
+                        handler.sendEmptyMessage(3);
+                    }else{
+                        handler.sendEmptyMessage(7);
+                    }
                     receivedResponse = true;
                 } catch (InterruptedIOException e) {
                     //如果接收数据时阻塞超时，重发并减少一次重发的次数
@@ -89,7 +93,7 @@ public class UDPHelper implements Runnable {
                     Message msg = new Message();
                     msg.what = 6;
                     Bundle da = new Bundle();
-                    da.putInt("try",tries);
+                    da.putInt("try", tries);
                     msg.setData(da);
                     handler.sendMessage(msg);
                     System.out.println("Time out," + (MAXNUM - tries) + " more tries...");
@@ -115,7 +119,11 @@ public class UDPHelper implements Runnable {
         } else {
             //如果重发MAXNUM次数据后，仍未获得服务器发送回来的数据，则打印如下信息
             System.out.println("No response -- give up.");
-            handler.sendEmptyMessage(4);
+            if(type.equals("auth")){
+                handler.sendEmptyMessage(4);
+            }else{
+                handler.sendEmptyMessage(8);
+            }
         }
         // mSocket.close();
     }

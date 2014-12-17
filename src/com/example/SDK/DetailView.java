@@ -113,10 +113,16 @@ public class DetailView extends LinearLayout implements View.OnClickListener {
                     Toast.makeText(context, "消息发送失败", Toast.LENGTH_SHORT).show();
                     break;
                 case 3:
-                    Toast.makeText(context, "消息发送成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "授权成功", Toast.LENGTH_SHORT).show();
+                    break;
+                case 7:
+                    Toast.makeText(context, "呼梯成功", Toast.LENGTH_SHORT).show();
                     break;
                 case 4:
-                    Toast.makeText(context, "服务器无响应.....", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "授权失败", Toast.LENGTH_SHORT).show();
+                    break;
+                case 8:
+                    Toast.makeText(context, "授权成功", Toast.LENGTH_SHORT).show();
                     break;
                 case 5:
                     Toast.makeText(context, "请在设置中填写每一个参数", Toast.LENGTH_LONG).show();

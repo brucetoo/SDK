@@ -30,6 +30,7 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
     private LinearLayout top1;
     private TextView change_secret;
     private Button save;
+    private CheckBox checkbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,24 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
             @Override
             public void onClick(View view) {
                 judge();
+            }
+        });
+        checkbox = (CheckBox) findViewById(R.id.checkbox);
+       if(SharePreUtils.getFloat(this,"boot") == 0){
+           checkbox.setChecked(false);
+       }else{
+           checkbox.setChecked(true);
+       }
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (checkbox.isChecked()) {
+                    SharePreUtils.saveFLoat(CenterActivity.this,"boot",1);
+                    Toast.makeText(CenterActivity.this, "已设置开机启动", Toast.LENGTH_SHORT).show();
+                } else {
+                    SharePreUtils.saveFLoat(CenterActivity.this,"boot",0);
+                    Toast.makeText(CenterActivity.this, "已取消开机启动", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
