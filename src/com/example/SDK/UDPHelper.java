@@ -113,6 +113,7 @@ public class UDPHelper implements Runnable {
             String str_receive = new String(receivePacket.getData(), receivePacket.getOffset(), receivePacket.getOffset() + receivePacket.getLength()) +
                     " from " + receivePacket.getAddress().getHostAddress() + ":" + receivePacket.getPort();
             System.out.println(str_receive);
+            System.out.println(bytesToHexString(receivePacket.getData()));
             //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，
             //所以这里要将dp_receive的内部消息长度重新置为1024
             receivePacket.setLength(1024);
@@ -248,7 +249,21 @@ public class UDPHelper implements Runnable {
         return (byte) "0123456789ABCDEF".indexOf(c);
     }
 
-
+    public static String bytesToHexString(byte[] src){
+        StringBuilder stringBuilder = new StringBuilder("");
+        if (src == null || src.length <= 0) {
+            return null;
+        }
+        for (int i = 0; i < src.length; i++) {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2) {
+                stringBuilder.append(0);
+            }
+            stringBuilder.append(hv+" ");
+        }
+        return stringBuilder.toString();
+    }
     //检查配置
     private boolean checkConfig() {
         if (TextUtils.isEmpty(SharePreUtils.getString(context, "room"))

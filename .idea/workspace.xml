@@ -90,11 +90,11 @@
       <file leaf-file-name="UDPHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44262296" vertical-offset="3864" max-vertical-offset="4488">
-              <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
+            <state vertical-scroll-proportion="-0.7263158" vertical-offset="2147" max-vertical-offset="4743">
+              <caret line="115" column="47" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="47" />
               <folding>
-                <element signature="e#8616#8617#0" expanded="true" />
-                <element signature="e#8675#8676#0" expanded="true" />
+                <element signature="e#8691#8692#0" expanded="true" />
+                <element signature="e#8750#8751#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -747,7 +747,7 @@
       <workItem from="1418780013379" duration="996000" />
       <workItem from="1418782969235" duration="4000" />
       <workItem from="1418787502846" duration="4629000" />
-      <workItem from="1418793705383" duration="6833000" />
+      <workItem from="1418793705383" duration="7327000" />
     </task>
     <task id="LOCAL-00001" summary="add main view">
       <created>1418356306332</created>
@@ -815,11 +815,17 @@
       <option name="project" value="LOCAL" />
       <updated>1418793158268</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="数据重新封装">
+      <created>1418801153809</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1418801153809</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110516000" />
+    <option name="totallyTimeSpent" value="111010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
@@ -883,7 +889,8 @@
     <MESSAGE value="细节最后优化" />
     <MESSAGE value="停止服务" />
     <MESSAGE value="开机启动" />
-    <option name="LAST_COMMIT_MESSAGE" value="开机启动" />
+    <MESSAGE value="数据重新封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据重新封装" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,11 +1322,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44262296" vertical-offset="3864" max-vertical-offset="4488">
-          <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
+        <state vertical-scroll-proportion="-0.7263158" vertical-offset="2147" max-vertical-offset="4743">
+          <caret line="115" column="47" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="47" />
           <folding>
-            <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8675#8676#0" expanded="true" />
+            <element signature="e#8691#8692#0" expanded="true" />
+            <element signature="e#8750#8751#0" expanded="true" />
           </folding>
         </state>
       </provider>
