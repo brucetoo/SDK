@@ -30,7 +30,7 @@ public class UDPHelper implements Runnable {
     private static String ipAddress;  //服务器IP
     private static String sign; //检验码
     private static String type;
-    private static String data; //发送的数据
+    private static byte[] data = new byte[12]; //发送的数据
 
     public UDPHelper(Context context, Handler handler, String type) {
         this.context = context;
@@ -43,11 +43,11 @@ public class UDPHelper implements Runnable {
      *
      * @param message
      */
-    public void send(String message) {
+    public void send(byte[] message) {
 
         handler.sendEmptyMessage(1);
         //Toast.makeText(context,"数据正在发送.....", Toast.LENGTH_LONG).show();
-        message = (message == null ? "UDP DATA!!!!" : message);
+        //message = (message == null ? "UDP DATA!!!!" : message);
         //int server_port = 5060;  //服务端端口号
         byte[] buf = new byte[1024];
         int tries = 0;                         //重发数据的次数
@@ -70,7 +70,7 @@ public class UDPHelper implements Runnable {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        datagramPacket = new DatagramPacket(message.getBytes(), message.length(), mAddress, serverPort);
+        datagramPacket = new DatagramPacket(message, message.length, mAddress, serverPort);
 
         while (!receivedResponse && tries < MAXNUM) {
             try {
@@ -137,6 +137,18 @@ public class UDPHelper implements Runnable {
         }
     }
 
+    public static String toHexString(String s)
+    {
+        String str="";
+        for (int i=0;i<s.length();i++)
+        {
+            int ch = (int)s.charAt(i);
+            String s4 = Integer.toHexString(ch);
+            str = str + s4;
+        }
+        return str;
+    }
+
     //发送参数组装
     private void getMsg(String type) {
 
@@ -160,27 +172,27 @@ public class UDPHelper implements Runnable {
         String mf = Integer.toHexString(floor);
         String mr = Integer.toHexString(room);
         if (floor <= 15) {
-            mf = "0" + mf;
+           mf = "0" + mf;
             //0xFF=-1; 0xFE=-2; 0xFD=-3; 0xFC=-4; 0xFB=-5; 0xFA=-6;
             if (floor < 0) {
                 switch (floor) {
                     case -1:
-                        mf = 0xFF + "";
+                        mf = Integer.toHexString(0xFF);
                         break;
                     case -2:
-                        mf = 0xFE + "";
+                        mf = Integer.toHexString(0xFE);
                         break;
                     case -3:
-                        mf = 0xFD + "";
+                        mf = Integer.toHexString(0xFD);
                         break;
                     case -4:
-                        mf = 0xFC + "";
+                        mf = Integer.toHexString(0xFC);
                         break;
                     case -5:
-                        mf = 0xFB + "";
+                        mf = Integer.toHexString(0xFB);
                         break;
                     case -6:
-                        mf = 0xFA + "";
+                        mf = Integer.toHexString(0xFA);
                         break;
                 }
             }
@@ -190,37 +202,52 @@ public class UDPHelper implements Runnable {
             mr = "0" + mr;
         }
 
-        Log.d("getMsg-floor-parse:", mf + "");
-        Log.d("getMsg-room-parse:", mr + "");
+        Log.d("getMsg-floor-parse:", mf);
+        Log.d("getMsg-room-parse:", mr + ":"+Integer.parseInt(mf+mr,16));
         String str = "";
         if (type.equals("auth")) {
-            sign = Integer.toHexString(0x000c + 0x408a + 0x0000 + 0x0100 + Integer.parseInt(mf + mr, 16)); //5099
-            str = sign + "000c408a00000100" + mf + mr;
+            sign = Integer.toHexString(0x000c + 0x408a + 0x0000 + 0x0100+Integer.parseInt(mf+mr,16) ); //5099
+            str = sign + "000c"+
+                    Integer.toHexString(0x408a)+
+                    "0000"+
+                    "0100"+
+                    mf + mr;
         } else {
             //0x000c+0x408b+0x0000+0x0f03+0x0100
-            sign = Integer.toHexString(0x000c + 0x408b + 0x0000 + Integer.parseInt(mf + mr, 16) + 0x0100); //5099
-            str = sign + "000c408b0000" + mf + mr + "0100";
+            sign = Integer.toHexString(0x000c + 0x408b + 0x0000 + Integer.parseInt(mf + mr, 16) + 0x0100); //509a
+            str = sign + "000c"+
+                    Integer.toHexString(0x408a)+
+                    "0000" + mf + mr +  "0100";
         }
         Log.d("getMag-sign:", sign);
         //50 99 00 0c 40 8a 00 00 01 00 0f 03
 /*        String str = "5099 000c 408a 0000 0100 0f03";
         str = sign + "000c408a00000100" + mf + mr;*/
-        data = parseString(str);
+        //data = parseString(str);
+        data = hexStringToBytes(str);
         Log.d("getMsg-str:", str);
-        Log.d("getMsg--data:", data);
+        Log.d("getMsg--data:", data.toString());
     }
 
-    public String parseString(String str) {
-        String result = "";
-        for (int i = 0; i < str.length(); i++) {
-            if (i % 2 == 1) {
-                result += str.charAt(i) + " ";
-            } else {
-                result += str.charAt(i) + "";
-            }
+    public static byte[] hexStringToBytes(String hexString) {
+        if (hexString == null || hexString.equals("")) {
+            return null;
         }
-        return result;
+        hexString = hexString.toUpperCase();
+        int length = hexString.length() / 2;
+        char[] hexChars = hexString.toCharArray();
+        byte[] d = new byte[length];
+        for (int i = 0; i < length; i++) {
+            int pos = i * 2;
+            d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+        }
+        return d;
     }
+
+    private static byte charToByte(char c) {
+        return (byte) "0123456789ABCDEF".indexOf(c);
+    }
+
 
     //检查配置
     private boolean checkConfig() {
