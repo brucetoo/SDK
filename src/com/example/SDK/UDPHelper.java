@@ -28,7 +28,8 @@ public class UDPHelper implements Runnable {
     private Handler handler;
     private static int serverPort;  //服务器端口号
     private static String ipAddress;  //服务器IP
-    private static String sign; //检验码
+    private static String sign; //检验码发送
+    private static String signRec; //检验码接收
     private static String type;
     private static byte[] data = new byte[12]; //发送的数据
 
@@ -80,11 +81,41 @@ public class UDPHelper implements Runnable {
                     //接收从服务端发送回来的数据
                     mSocket.receive(receivePacket);
                     //如果接收到数据。则将receivedResponse标志位改为true，从而退出循环
+                    String str ="";
                     if (type.equals("auth")) {
                         //xxxx	0x0008	0x408A	0x02	0x00
-                        handler.sendEmptyMessage(3);
+                        signRec = Integer.toHexString(0x0008 + 0x408a + 0x0200 ); //
+                        if(signRec.length()>=5){  //sign字节溢出
+                            signRec = signRec.substring(signRec.length()-4,signRec.length());
+                        }
+                        str = signRec + "0008"+
+                                Integer.toHexString(0x408a)+
+                                "0200";
+                        Log.d("signRec:",signRec);
+                        Log.d("signRec-str:",str);
+                        Log.d("signRec-HexString:",parseString(bytesToHexString(receivePacket.getData())));
+                        if(str.equals(parseString(bytesToHexString(receivePacket.getData())))){
+                            handler.sendEmptyMessage(3);
+                        }else{
+                            handler.sendEmptyMessage(4);
+                        }
                     }else{
-                        handler.sendEmptyMessage(7);
+
+                        signRec = Integer.toHexString(0x0008 + 0x408b + 0x0200 ); //
+                        if(signRec.length()>=5){  //sign字节溢出
+                            signRec = signRec.substring(signRec.length()-4,signRec.length());
+                        }
+                        str = signRec + "0008"+
+                                Integer.toHexString(0x408b)+
+                                "0200";
+                        Log.d("signRec:",signRec);
+                        Log.d("signRec-str:",str);
+                        Log.d("signRec-HexString:",parseString(bytesToHexString(receivePacket.getData())));
+                        if(str.equals(parseString(bytesToHexString(receivePacket.getData())))){
+                            handler.sendEmptyMessage(7);
+                        }else{
+                            handler.sendEmptyMessage(8);
+                        }
                     }
                     receivedResponse = true;
                 } catch (InterruptedIOException e) {
@@ -137,6 +168,13 @@ public class UDPHelper implements Runnable {
             getMsg(type);
             send(data); //发送的数据
         }
+    }
+
+
+    public String parseString(String string){
+        String result = string.replace(" ","");
+        result = result.substring(0,16);
+        return result;
     }
 
     public static String toHexString(String s)
