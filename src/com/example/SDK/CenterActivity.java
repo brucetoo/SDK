@@ -83,19 +83,19 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
             }
         });
         checkbox = (CheckBox) findViewById(R.id.checkbox);
-       if(SharePreUtils.getFloat(this,"boot") == 0){
-           checkbox.setChecked(false);
-       }else{
-           checkbox.setChecked(true);
-       }
+        if (SharePreUtils.getFloat(this, "boot") == 0) {
+            checkbox.setChecked(false);
+        } else {
+            checkbox.setChecked(true);
+        }
         checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (checkbox.isChecked()) {
-                    SharePreUtils.saveFLoat(CenterActivity.this,"boot",1);
+                    SharePreUtils.saveFLoat(CenterActivity.this, "boot", 1);
                     Toast.makeText(CenterActivity.this, "已设置开机启动", Toast.LENGTH_SHORT).show();
                 } else {
-                    SharePreUtils.saveFLoat(CenterActivity.this,"boot",0);
+                    SharePreUtils.saveFLoat(CenterActivity.this, "boot", 0);
                     Toast.makeText(CenterActivity.this, "已取消开机启动", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -114,15 +114,17 @@ public class CenterActivity extends Activity implements SeekBar.OnSeekBarChangeL
             Toast.makeText(CenterActivity.this, "每个参数都不能为空,请再次输入", Toast.LENGTH_SHORT).show();
         } else {
             if (Integer.parseInt(room.getText().toString()) > 254) {
-                Toast.makeText(CenterActivity.this, "房间号不能大于254", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CenterActivity.this, "房间号大于254,已默认为254", Toast.LENGTH_SHORT).show();
                 SharePreUtils.saveString(CenterActivity.this, "room", "254");
             } else {
                 SharePreUtils.saveString(CenterActivity.this, "room", room.getText().toString());
             }
 
             if (Integer.parseInt(floor.getText().toString()) > 254) {
-                Toast.makeText(CenterActivity.this, "楼层不能大于254", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CenterActivity.this, "楼层大于254,已默认为254", Toast.LENGTH_SHORT).show();
                 SharePreUtils.saveString(CenterActivity.this, "floor", "254");
+            } else if (Integer.parseInt(floor.getText().toString()) < -6) {
+                Toast.makeText(CenterActivity.this, "楼层小于-6,已默认为-6", Toast.LENGTH_SHORT).show();
             } else {
                 SharePreUtils.saveString(CenterActivity.this, "floor", floor.getText().toString());
             }
