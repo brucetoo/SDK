@@ -19,6 +19,7 @@ public class SecretActivity extends Activity {
     private EditText new_secret;
     private EditText new_secret_again;
     private Button secret_confirm;
+    private Button secret_cancle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class SecretActivity extends Activity {
                 if (new_secret.getText().toString().equals(new_secret_again.getText().toString())) {
                     SharePreUtils.saveString(this, "password", new_secret.getText().toString());
                     Toast.makeText(this, "密码修改成功", Toast.LENGTH_SHORT).show();
+                    SharePreUtils.saveFLoat(this, "hint", 1);
                     this.finish();
                 }else{
                     Toast.makeText(this, "前后密码不匹配,请重新输入", Toast.LENGTH_SHORT).show();
@@ -56,10 +58,17 @@ public class SecretActivity extends Activity {
         new_secret = (EditText) findViewById(R.id.new_secret);
         new_secret_again = (EditText) findViewById(R.id.new_secret_again);
         secret_confirm = (Button) findViewById(R.id.secret_confirm);
+        secret_cancle = (Button) findViewById(R.id.secret_cancle);
         secret_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 judge();
+            }
+        });
+        secret_cancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SecretActivity.this.finish();
             }
         });
     }

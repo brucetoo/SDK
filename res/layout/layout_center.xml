@@ -2,6 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:background="@color/white"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
@@ -313,19 +314,15 @@
                     />
 
             <RelativeLayout android:layout_width="fill_parent"
-                            android:layout_height="40dp">
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_centerInParent="true"
-                          android:text="点击-密码修改"
-                          android:id="@+id/change_secret"
-                          android:onClick="setSecret"
-                          android:layout_marginTop="10dp"
-                          android:layout_marginLeft="30dp"
-                          android:textColor="@color/black2"
-                          android:textSize="15sp"
-                        />
-
+                            android:layout_height="50dp">
+                <Button android:layout_width="fill_parent"
+                        style="@style/ButtonStyle"
+                        android:text="修改密码"
+                        android:onClick="setSecret"
+                        android:id="@+id/change_secret"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="50dp"/>
             </RelativeLayout>
             <RelativeLayout android:layout_width="fill_parent"
                             android:layout_height="40dp">
@@ -341,10 +338,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <ImageView android:layout_width="fill_parent"
-               android:layout_height="match_parent"
-               android:scaleType="centerInside"
-               android:background="#F0EFF4"
-               android:src="@drawable/logo"
-            />
 </LinearLayout>

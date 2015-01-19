@@ -56,7 +56,7 @@ public class UDPHelper implements Runnable {
         Log.d("UDP Demo", "UDP发送数据:" + message);
         try {
             if (i == 0) {
-                mSocket = new DatagramSocket(7000); //客户端接受消息端口号
+                mSocket = new DatagramSocket(serverPort); //客户端接受消息端口号
                 mSocket.setSoTimeout(5000); //5s超时
                 i = 1;
             }
@@ -262,7 +262,7 @@ public class UDPHelper implements Runnable {
                 sign = sign.substring(sign.length()-4,sign.length());
             }
             str = sign + "000c"+
-                    Integer.toHexString(0x408a)+
+                    Integer.toHexString(0x408b)+
                     "0000" + mf + mr +  "0100";
         }
         Log.d("getMag-sign:", sign);

@@ -24,6 +24,14 @@ public class PasswordActivity extends Activity {
         initDialog();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(SharePreUtils.getFloat(this,"hint") != 0){
+            custom_dialog_edit_text.setHint("");
+        }
+    }
+
     private void initDialog() {
          dialog = new CustomDialog(this, R.style.CustomDialog);
         //dialog.setTitleText("    ");
