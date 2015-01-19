@@ -54,23 +54,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c505d868-95d2-4895-b343-c0b731109cf6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/DetailView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$string.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$style.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/example/SDK/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" afterPath="$PROJECT_DIR$/out/production/SDK/com/premnirmal/Magnet/RemoveView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SDK/SDK.apk" afterPath="$PROJECT_DIR$/out/production/SDK/SDK.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/PasswordActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/SecretActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java" afterPath="$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_center.xml" afterPath="$PROJECT_DIR$/res/layout/layout_center.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_change_secret.xml" afterPath="$PROJECT_DIR$/res/layout/layout_change_secret.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/layout_flow.xml" afterPath="$PROJECT_DIR$/res/layout/layout_flow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/logo.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/logo.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/logo.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SDK.iws" />
@@ -100,8 +86,8 @@
       <file leaf-file-name="UDPHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35230353" vertical-offset="499" max-vertical-offset="5474">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.398374" vertical-offset="499" max-vertical-offset="5474">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -250,6 +236,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xxhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -277,15 +339,15 @@
     <property name="project.structure.side.proportion" value="0.36593786" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
-    <property name="AndroidTargetDevices" value="192.168.56.101:5555" />
+    <property name="AndroidTargetDevices" value="052961d8002e8ab3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\resource\SDK\res\drawable-hdpi" />
       <recent name="E:\resource\SDK\res\drawable-xxhdpi" />
       <recent name="E:\resource\SDK\res\drawable-xhdpi" />
       <recent name="F:\FloatView\res\drawable" />
       <recent name="E:\resource\demo\res\drawable" />
-      <recent name="E:\resource\demo\res\drawable-hdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\SDK\res\layout" />
@@ -642,7 +704,7 @@
       <workItem from="1419318757494" duration="36000" />
       <workItem from="1419318880200" duration="3570000" />
       <workItem from="1419390400855" duration="179000" />
-      <workItem from="1421630708944" duration="5919000" />
+      <workItem from="1421630708944" duration="7127000" />
     </task>
     <task id="LOCAL-00001" summary="add main view">
       <created>1418356306332</created>
@@ -740,11 +802,17 @@
       <option name="project" value="LOCAL" />
       <updated>1418824289544</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="细节处理">
+      <created>1421636681603</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1421636681627</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127256000" />
+    <option name="totallyTimeSpent" value="128464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
@@ -846,7 +914,8 @@
     <MESSAGE value="sign校验" />
     <MESSAGE value="suit of Ui" />
     <MESSAGE value="detail complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="detail complete" />
+    <MESSAGE value="细节处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1104,11 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1270,8 +1334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SDK/UDPHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35230353" vertical-offset="499" max-vertical-offset="5474">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.398374" vertical-offset="499" max-vertical-offset="5474">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
