@@ -6,48 +6,53 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content">
     <ImageView android:layout_width="70dp"
-               android:src="@drawable/logo"
+               android:src="@drawable/logo1"
                android:id="@+id/image"
                android:layout_marginTop="6dp"
                android:layout_height="70dp"/>
 
     <LinearLayout android:orientation="horizontal"
-                  android:layout_width="140dp"
+                  android:layout_width="wrap_content"
                   android:layout_marginTop="6dp"
                   android:layout_marginLeft="2dp"
                   android:background="@drawable/edittext"
                   android:layout_height="70dp">
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="20sp"
+                  android:id="@+id/auth"
+                  android:gravity="center"
+                  android:text="授权"
+                  android:layout_margin="10dp"
+                  android:textColor="@color/blue3"
+                  android:layout_height="fill_parent"/>
+
+        <View android:layout_width="1dp"
+              android:background="@color/gray2"
+              android:layout_height="fill_parent"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:id="@+id/call"
+                  android:textSize="20sp"
+                  android:gravity="center"
+                  android:text="呼梯"
+                  android:layout_margin="10dp"
+                  android:textColor="@color/blue3"
+                  android:layout_height="fill_parent"/>
+
+        <View android:layout_width="1dp"
+              android:background="@color/gray2"
+              android:layout_height="fill_parent"/>
 
         <TextView android:layout_width="0dp"
                   android:layout_weight="1"
                   android:text="设置"
-                  android:textSize="12sp"
+                  android:textSize="20sp"
+                  android:layout_margin="10dp"
                   android:textColor="@color/blue3"
                   android:id="@+id/setting"
                   android:gravity="center"
                   android:layout_height="wrap_content"/>
-        <View android:layout_width="1dp"
-              android:background="@color/gray2"
-              android:layout_height="fill_parent"/>
-        <TextView android:layout_width="0dp"
-                  android:layout_weight="1"
-                  android:textSize="12sp"
-                  android:id="@+id/auth"
-                  android:gravity="center"
-                  android:text="授权"
-                  android:textColor="@color/blue3"
-                  android:layout_height="fill_parent"/>
-        <View android:layout_width="1dp"
-              android:background="@color/gray2"
-              android:layout_height="fill_parent"/>
 
-        <TextView android:layout_width="0dp"
-                  android:layout_weight="1"
-                  android:id="@+id/call"
-                  android:textSize="12sp"
-                  android:gravity="center"
-                  android:text="呼梯"
-                  android:textColor="@color/blue3"
-                  android:layout_height="fill_parent"/>
     </LinearLayout>
 </LinearLayout>
